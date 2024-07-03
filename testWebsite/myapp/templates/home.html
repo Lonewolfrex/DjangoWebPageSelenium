@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Web Application</h1>
+    <div class="options">
+        <a href="{% url 'calculator' %}">Calculator Application</a>
+        <a href="{% url 'fibonacci' %}">Fibonacci Series</a>
+        <a href="{% url 'palindrome' %}">Palindrome Checker</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="expression" placeholder="Enter expression">
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result is not None %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

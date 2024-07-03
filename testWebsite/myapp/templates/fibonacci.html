@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="number" placeholder="Enter a number">
+        <button type="submit">Generate</button>
+    </form>
+    {% if sequence %}
+        <p>Series: {{ sequence|join:', ' }}</p>
+    {% endif %}
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
