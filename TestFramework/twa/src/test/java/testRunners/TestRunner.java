@@ -8,11 +8,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import customMethods.config_reader;
 @CucumberOptions(
-    features = {
-    		"src/test/java/Features/HomePage.feature",
-    		}, // Path to your feature files
-    glue = {"stepDefinitions"},    // Package where your step definitions are located
-    plugin = {"pretty", "html:target/cucumber-reports"} // Report generation options (optional)
+    features = {"src/test/resources/Feature_files/HomePage.feature"},
+    glue = {"stepDefinitions"},   
+    plugin = {"pretty", "html:target/cucumber-reports"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {

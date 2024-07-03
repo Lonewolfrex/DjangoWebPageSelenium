@@ -17,19 +17,19 @@ public class webdriver_factory {
                 case "chrome":
                     ChromeOptions chrome_options = new ChromeOptions();
                     chrome_options.setHeadless(false);
-                    System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
                     driver = new ChromeDriver(chrome_options);
                     break;
                     
                 case "firefox":
                 	FirefoxOptions firefox_options = new FirefoxOptions();
                 	firefox_options.setHeadless(false);
-                    System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
+                    System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
                     driver = new FirefoxDriver(firefox_options);
                     break;
                     
                 case "edge":
-                    System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
+                    System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
                     driver = new EdgeDriver();
                     break;
                     

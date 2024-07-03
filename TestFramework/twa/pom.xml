@@ -114,7 +114,7 @@
 	        <version>3.0.0-M5</version>
 	        <configuration>
 	            <suiteXmlFiles>
-	                <suiteXmlFile>src/test/resources/testNG_directory/cross_browser_testng.xml</suiteXmlFile>
+	                <suiteXmlFile>testNG_directory/chrome-suite.xml</suiteXmlFile>
 	            </suiteXmlFiles>
 	        </configuration>
 	    </plugin>        

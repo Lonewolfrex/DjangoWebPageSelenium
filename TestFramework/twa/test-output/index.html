@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" class="navigator-link">
-              <span class="suite-name border-passed">Cucumber Tests in chrome</span>
+              <span class="suite-name border-failed">Cucumber Tests in chrome</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,31 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" class="hide-methods passed suite-Cucumber_Tests_in_chrome"> (hide)</a> <!-- hide-methods passed suite-Cucumber_Tests_in_chrome -->
-                      <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" class="show-methods passed suite-Cucumber_Tests_in_chrome"> (show)</a> <!-- show-methods passed suite-Cucumber_Tests_in_chrome -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" class="hide-methods failed suite-Cucumber_Tests_in_chrome"> (hide)</a> <!-- hide-methods failed suite-Cucumber_Tests_in_chrome -->
+                      <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" class="show-methods failed suite-Cucumber_Tests_in_chrome"> (show)</a> <!-- show-methods failed suite-Cucumber_Tests_in_chrome -->
                     </span>
-                    <div class="method-list-content passed suite-Cucumber_Tests_in_chrome">
+                    <div class="method-list-content failed suite-Cucumber_Tests_in_chrome">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;View the Home Page&quot;, &quot;Optional[Testing Django Demo Website home page feature]&quot;)">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;View the Home Page&quot;, &quot;Optional[Testing Django Demo Website home page feature]&quot;)">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Cucumber_Tests_in_chrome" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;View the Home Page&quot;, &quot;Optional[Testing Django Demo Website home page feature]&quot;)">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Cucumber_Tests_in_chrome -->
+                    </div> <!-- method-list-content failed suite-Cucumber_Tests_in_chrome -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,9 +129,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Cucumber_Tests_in_chrome" class="panel Cucumber_Tests_in_chrome">
-          <div class="suite-Cucumber_Tests_in_chrome-class-passed">
+          <div class="suite-Cucumber_Tests_in_chrome-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testRunners.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -141,6 +141,24 @@
                   </a> <!-- runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=126.0.6478.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WOLFDEN&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\sampa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d318665b455e30279d82a2e52122ca7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepDefinitions.HomePageStepDefinitions.launch_Website(HomePageStepDefinitions.java:36)
+	at ✽.I launch the Django demo website(file:///C:/DjangoWebPageSelenium/TestFramework/twa/src/test/resources/Feature_files/HomePage.feature:3)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -151,6 +169,24 @@
                   </a> <!-- runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=126.0.6478.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WOLFDEN&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\sampa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3369}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79c686ac068ce13f4a04748d8f28c492
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepDefinitions.HomePageStepDefinitions.launch_Website(HomePageStepDefinitions.java:36)
+	at ✽.I launch the Django demo website(file:///C:/DjangoWebPageSelenium/TestFramework/twa/src/test/resources/Feature_files/HomePage.feature:3)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -161,12 +197,30 @@
                   </a> <!-- runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=126.0.6478.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WOLFDEN&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\sampa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3537}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ca378946b1b35218617f69f4b4ae1f7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepDefinitions.HomePageStepDefinitions.launch_Website(HomePageStepDefinitions.java:36)
+	at ✽.I launch the Django demo website(file:///C:/DjangoWebPageSelenium/TestFramework/twa/src/test/resources/Feature_files/HomePage.feature:3)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Cucumber_Tests_in_chrome-class-passed -->
+          </div> <!-- suite-Cucumber_Tests_in_chrome-class-failed -->
         </div> <!-- panel Cucumber_Tests_in_chrome -->
         <div panel-name="test-xml-Cucumber_Tests_in_chrome" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -232,20 +286,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunners.TestRunner')
-data.setCell(0, 3, 6970);
+data.setCell(0, 3, 11736);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'testRunners.TestRunner')
-data.setCell(1, 3, 6701);
+data.setCell(1, 3, 10742);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'testRunners.TestRunner')
-data.setCell(2, 3, 6377);
+data.setCell(2, 3, 10737);
 window.suiteTableData['Cucumber_Tests_in_chrome']= { tableData: data, tableDiv: 'times-div-Cucumber_Tests_in_chrome'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Cucumber_Tests_in_chrome">
               </div> <!-- times-div-Cucumber_Tests_in_chrome -->
             </div> <!-- times-div -->
@@ -260,24 +314,18 @@ return data;
               <span class="reporter-method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">I launch the Django demo website</span>
-                <span class="reporter-method-output">Feature File Step: I view the Home Page</span>
-                <span class="reporter-method-output">Feature File Step:I click on the feature</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">I launch the Django demo website</span>
-                <span class="reporter-method-output">Feature File Step: I view the Home Page</span>
-                <span class="reporter-method-output">Feature File Step:I click on the feature</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">I launch the Django demo website</span>
-                <span class="reporter-method-output">Feature File Step: I view the Home Page</span>
-                <span class="reporter-method-output">Feature File Step:I click on the feature</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -302,23 +350,29 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">26 ms</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
-                <span class="method-start">533 ms</span>
+                <span class="method-start">428 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
-                <span class="method-start">7506 ms</span>
+                <span class="method-start">12170 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("View the Home Page", "Optional[Testing Django Demo Website home page feature]")</span>
-                <span class="method-start">13884 ms</span>
+                <span class="method-start">22914 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">20589 ms</span>
+                <span class="method-start">33654 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
