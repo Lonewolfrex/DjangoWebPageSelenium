@@ -33,7 +33,7 @@ public class HomePageStepDefinitions extends BaseStepDefinitions {
     @Given("I launch the Django demo website")
     public void launch_Website() {
     	custom_logger.log("I launch the Django demo website");
-    	driver.get("http://localhost:8084/");
+    	driver.get("http://127.0.0.1:8085");
         try {
             home_page.verifyProductsPage();
         } catch (Exception e) {
